@@ -54,7 +54,7 @@ public class ProductController {
 //    }
 
     //총액 1억 제한
-    if(saveForm.getQuantity() * saveForm.getPrice() > 100_000_000){
+    if(saveForm.getQuantity() * saveForm.getPrice() > 100_000_000L){
       bindingResult.reject("totalprice", new String[]{"100000000"},"총액(상품수량*단가) 1억을 초과할 수 없습니다.");
     }
     if(bindingResult.hasErrors()){
